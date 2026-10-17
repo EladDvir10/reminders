@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" id="mf">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>תזכורות</title>
+<script>
+/* manifest + icons embedded so the app is installable even from index.html alone */
+(function(){try{
+var I192="data:image/png;base64,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",I512="data:image/png;base64,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AACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYCgCAACGIgAAYKj/A2qlW6vFgRXIAAAAAElFTkSuQmCC";
+var m={name:"תזכורות — כדורים ומשימות",short_name:"תזכורות",lang:"he",dir:"rtl",start_url:location.origin+"/",scope:location.origin+"/",display:"standalone",background_color:"#0f766e",theme_color:"#0f766e",icons:[{src:I192,sizes:"192x192",type:"image/png",purpose:"any"},{src:I512,sizes:"512x512",type:"image/png",purpose:"any"}]};
+document.getElementById("mf").href=URL.createObjectURL(new Blob([JSON.stringify(m)],{type:"application/manifest+json"}));
+window.__ICON=I192;
+}catch(e){}})();
+</script>
+
+<style>
+:root{--bg:#f4f7f6;--card:#fff;--tx:#12201e;--mut:#5f7471;--pri:#0f766e;--pri2:#0d5f59;--ok:#16a34a;--warn:#d97706;--bad:#dc2626;--line:#dbe5e3}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1514;--card:#17211f;--tx:#e8f0ee;--mut:#97aaa6;--pri:#2dd4bf;--pri2:#5eead4;--line:#27363a}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--tx);padding-bottom:90px}
+header{position:sticky;top:0;background:var(--pri);color:#fff;padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));font-size:20px;font-weight:700;z-index:5}
+@media (prefers-color-scheme:dark){header{color:#06201c}}
+main{padding:12px;max-width:640px;margin:0 auto}
+h2{font-size:15px;color:var(--mut);margin:18px 4px 8px;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.title{font-weight:700;font-size:17px}
+.sub{color:var(--mut);font-size:13px;margin-top:2px}
+.time{font-size:20px;font-weight:800;min-width:58px}
+.badge{font-size:12px;padding:3px 9px;border-radius:99px;font-weight:700;white-space:nowrap}
+.b-taken,.b-done{background:#dcfce7;color:#166534}.b-skipped{background:#e5e7eb;color:#374151}
+.b-missed{background:#fee2e2;color:#991b1b}.b-due{background:#fef3c7;color:#92400e}.b-snoozed{background:#dbeafe;color:#1e40af}.b-upcoming{background:#eef2f1;color:#475569}
+.btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+button{font:inherit;border:0;border-radius:12px;padding:11px 16px;font-weight:700;cursor:pointer;background:var(--line);color:var(--tx)}
+button.p{background:var(--pri);color:#fff}button.ok{background:var(--ok);color:#fff}button.d{background:#fee2e2;color:#991b1b}
+button.sm{padding:6px 12px;font-size:13px}
+.grow{flex:1}
+.alert{border-color:var(--warn);border-width:2px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);z-index:6}
+nav button{flex:1;background:none;border-radius:0;padding:12px 4px;color:var(--mut);font-size:13px}
+nav button.on{color:var(--pri)}
+nav .ic{display:block;font-size:20px}
+.fab{position:fixed;bottom:calc(74px + env(safe-area-inset-bottom));left:16px;width:58px;height:58px;border-radius:50%;background:var(--pri);color:#fff;font-size:32px;line-height:1;padding:0;box-shadow:0 6px 18px #0004;z-index:7}
+.sheetbg{position:fixed;inset:0;background:#0007;z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--card);width:100%;max-width:640px;border-radius:20px 20px 0 0;padding:18px;max-height:92vh;overflow:auto;padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+label{display:block;font-size:13px;color:var(--mut);margin:12px 0 4px;font-weight:600}
+input,select,textarea{font:inherit;width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx)}
+.seg{display:flex;gap:6px}.seg button{flex:1;background:var(--bg);border:1px solid var(--line)}.seg button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.times{display:flex;flex-wrap:wrap;gap:8px}.times .t{display:flex;gap:4px;align-items:center}.times input{width:110px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:7px 4px;border-bottom:1px solid var(--line);text-align:right}th{color:var(--mut)}
+.pct{font-size:28px;font-weight:800;color:var(--pri)}
+.empty{text-align:center;color:var(--mut);padding:30px 10px}
+.note{font-size:13px;color:var(--mut);line-height:1.5}
+#ring{position:fixed;inset:0;z-index:15;pointer-events:none}
+.ringbg{position:fixed;inset:0;background:#0b3b37ee;display:flex;align-items:center;justify-content:center;padding:18px;pointer-events:auto;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{background:#14554fee}}
+.ringcard{background:var(--card);border-radius:20px;padding:22px;width:100%;max-width:420px;text-align:center}
+.ringic{font-size:56px}.ringttl{font-size:26px;font-weight:800;margin:6px 0}
+button.big{font-size:22px;padding:18px}
+label.chk{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--tx)}label.chk input{width:auto;margin-top:3px}
+</style>
+</head>
+<body>
+<header id="hdr">תזכורות</header>
+<main id="main"></main>
+<button class="fab" id="fab" aria-label="הוסף">+</button>
+<nav id="nav"></nav>
+<div id="ring"></div>
+<div id="sheetHost"></div>
+
+<script>
+'use strict';
+const LS='remindersApp.v1';
+const NATIVE=!!(window.Capacitor&&window.Capacitor.isNativePlatform&&window.Capacitor.isNativePlatform());
+const LN=NATIVE?((window.Capacitor.Plugins&&window.Capacitor.Plugins.LocalNotifications)||window.Capacitor.registerPlugin('LocalNotifications')):null;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad=n=>String(n).padStart(2,'0');
+const ymd=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const hm=ts=>{const d=new Date(ts);return pad(d.getHours())+':'+pad(d.getMinutes())};
+const tsOf=(date,time)=>{const [y,m,d]=date.split('-').map(Number),[h,mi]=time.split(':').map(Number);return new Date(y,m-1,d,h,mi).getTime()};
+const fmtDate=ds=>{const [y,m,d]=ds.split('-');return d+'/'+m+'/'+y.slice(2)};
+const DAYS=['א׳','ב׳','ג׳','ד׳','ה׳','ו׳','ש׳'];
+const dayName=ds=>DAYS[new Date(ds+'T00:00').getDay()];
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const once=it=>it.type==='task'&&!it.recurring;
+const addDays=(ds,n)=>{const d=new Date(ds+'T00:00');d.setDate(d.getDate()+n);return ymd(d)};
+
+function load(){try{const d=JSON.parse(localStorage.getItem(LS));if(d&&d.items)return d}catch(e){}
+  return{items:[],records:{},snooze:{},snoozeCount:{},notified:{},settings:{repeat:10,lateHours:3}}}
+let S=load();
+const save=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}if(window.__nsync)window.__nsync()};
+
+/* ---------- occurrences ---------- */
+const mk=(item,ds,t)=>({key:item.id+'|'+ds+'|'+t,item,date:ds,time:t,ts:tsOf(ds,t)});
+function occs(item,from,to){
+  const out=[];
+  if(once(item)){ if(item.date>=from&&item.date<=to) out.push(mk(item,item.date,item.time)); }
+  else{
+    const start=item.start>from?item.start:from;
+    let end=to; if(item.end&&item.end<end) end=item.end;
+    const d=new Date(start+'T00:00'),e=new Date(end+'T00:00');
+    while(d<=e){const ds=ymd(d);for(const t of item.times)out.push(mk(item,ds,t));d.setDate(d.getDate()+1);}
+  }
+  return item.stopped?out.filter(o=>o.ts<=item.stopped):out;
+}
+const eff=o=>S.snooze[o.key]||o.ts;
+function state(o,now=Date.now()){
+  const r=S.records[o.key]; if(r) return r.status;
+  const e=eff(o);
+  if(e>now) return S.snooze[o.key]?'snoozed':'upcoming';
+  return now-e>S.settings.lateHours*3600000?'missed':'due';
+}
+const LABEL={taken:'נלקח ✓',done:'בוצע ✓',skipped:'דולג',missed:'לא נרשם',due:'ממתין לאישור',snoozed:'נדחה',upcoming:'בהמשך'};
+const itemById=id=>S.items.find(i=>i.id===id);
+const activeItems=()=>S.items.filter(i=>!i.stopped);
+function occByKey(key){const [id,date,time]=key.split('|');const it=itemById(id);return it?mk(it,date,time):null}
+
+/* ---------- actions ---------- */
+function act(key,status){
+  const o=occByKey(key); if(!o)return;
+  S.records[key]={status:status==='taken'&&o.item.type==='task'?'done':status,at:Date.now()};
+  delete S.snooze[key]; save(); closeSheet(); render();
+  try{navigator.serviceWorker?.getRegistration().then(r=>r&&r.getNotifications({tag:key}).then(n=>n.forEach(x=>x.close())))}catch(e){}
+}
+function undo(key){delete S.records[key];save();render()}
+function doSnooze(key,ts){
+  if(ts<=Date.now()){alert('בחר שעה מאוחרת יותר מעכשיו');return}
+  S.snooze[key]=ts;S.snoozeCount[key]=(S.snoozeCount[key]||0)+1;delete S.notified[key];save();closeSheet();render();
+}
+
+/* ---------- ui helpers ---------- */
+let tab='today';
+function sheet(html){$('#sheetHost').innerHTML='<div class="sheetbg" id="sbg"><div class="sheet">'+html+'</div></div>';$('#sbg').addEventListener('click',e=>{if(e.target.id==='sbg')closeSheet()})}
+function closeSheet(){$('#sheetHost').innerHTML=''}
+window.closeSheet=closeSheet;
+
+function occCard(o,{showBtns=true}={}){
+  const st=state(o), it=o.item, pending=(st==='due'||st==='missed');
+  const snz=S.snooze[o.key]&&st==='snoozed'?' ל־'+hm(S.snooze[o.key]):'';
+  const verb=it.type==='med'?'נטלתי':'בוצע';
+  let b='';
+  if(showBtns&&(pending||st==='snoozed'||st==='upcoming')){
+    b='<div class="btns"><button class="ok grow" onclick="act(\''+o.key+'\',\'taken\')">'+verb+'</button>'+
+      '<button onclick="openSnooze(\''+o.key+'\')">דחה</button>'+
+      '<button onclick="act(\''+o.key+'\',\'skipped\')">דלג</button></div>';
+  }else if(S.records[o.key]){
+    b='<div class="btns"><button class="sm" onclick="undo(\''+o.key+'\')">בטל סימון</button></div>';
+  }
+  const today=ymd(new Date());
+  const when=o.date===today?'':'<span class="sub"> · '+dayName(o.date)+' '+fmtDate(o.date)+'</span>';
+  return '<div class="card'+(st==='due'?' alert':'')+'"><div class="row"><div class="time">'+hm(eff(o))+'</div>'+
+    '<div class="grow"><div class="title">'+esc(it.name)+'</div><div class="sub">'+(it.type==='med'?(esc(it.dose||'')):'פעולה')+when+(S.snooze[o.key]?' · מקורי '+o.time:'')+'</div></div>'+
+    '<span class="badge b-'+st+'">'+LABEL[st]+snz+'</span></div>'+b+'</div>';
+}
+window.act=act;window.undo=undo;
+
+function openSnooze(key){
+  const o=occByKey(key); const d=new Date(Date.now()+15*60000);
+  sheet('<div class="title">דחיית "'+esc(o.item.name)+'"</div>'+
+    '<div class="btns"><button class="p" onclick="snoozeIn(\''+key+'\',10)">10 דק׳</button><button class="p" onclick="snoozeIn(\''+key+'\',30)">30 דק׳</button><button class="p" onclick="snoozeIn(\''+key+'\',60)">שעה</button><button class="p" onclick="snoozeIn(\''+key+'\',120)">שעתיים</button></div>'+
+    '<label>או בחר שעה מדויקת</label><input type="time" id="snT" value="'+pad(d.getHours())+':'+pad(d.getMinutes())+'">'+
+    '<div class="btns"><button class="p grow" onclick="snoozeAt(\''+key+'\')">דחה לשעה זו</button><button onclick="closeSheet()">ביטול</button></div>');
+}
+window.openSnooze=openSnooze;
+window.snoozeIn=(k,m)=>doSnooze(k,Date.now()+m*60000);
+window.snoozeAt=k=>{
+  const v=$('#snT').value; if(!v)return;
+  let ts=tsOf(ymd(new Date()),v); if(ts<=Date.now()) ts+=86400000; // שעה שעברה = מחר
+  doSnooze(k,ts);
+};
+
+/* ---------- views ---------- */
+function vToday(){
+  const now=Date.now(),today=ymd(new Date()),y=ymd(new Date(now-2*86400000));
+  const all=activeItems().flatMap(i=>occs(i,y,today));
+  const pend=all.filter(o=>{const s=state(o,now);return (s==='due'||s==='missed')&&o.date<=today}).sort((a,b)=>eff(a)-eff(b));
+  const pk=new Set(pend.map(o=>o.key));
+  const td=all.filter(o=>o.date===today&&!pk.has(o.key)).sort((a,b)=>eff(a)-eff(b));
+  let h='';
+  if(pend.length)h+='<h2>⏰ ממתינות לאישור ('+pend.length+')</h2>'+pend.map(o=>occCard(o)).join('');
+  h+='<h2>היום · '+dayName(today)+' '+fmtDate(today)+'</h2>';
+  h+=td.length?td.map(o=>occCard(o)).join(''):(pend.length?'':'<div class="empty">אין תזכורות להיום.<br>לחץ על + כדי להוסיף.</div>');
+  return h;
+}
+function itemLine(it){
+  if(once(it))return '📌 '+fmtDate(it.date)+' · '+it.time;
+  const days=it.end?Math.round((new Date(it.end+'T00:00')-new Date(it.start+'T00:00'))/86400000)+1:0;
+  return (it.type==='med'?'💊 ':'📌 ')+it.times.join(' · ')+' · '+it.times.length+' פעמים ביום'+(it.end?' · '+fmtDate(it.start)+'–'+fmtDate(it.end)+' ('+days+' ימים)':' · ללא הגבלה');
+}
+function vItems(){
+  const act_=activeItems(),meds=act_.filter(i=>!once(i)),tasks=act_.filter(i=>once(i)).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+  const card=i=>'<div class="card"><div class="row"><div class="grow"><div class="title">'+esc(i.name)+'</div><div class="sub">'+(i.dose?esc(i.dose)+' · ':'')+itemLine(i)+'</div>'+(i.notes?'<div class="sub">'+esc(i.notes)+'</div>':'')+'</div>'+
+    '<button class="sm" onclick="openForm(\''+i.id+'\')">ערוך</button></div></div>';
+  let h='<h2>טיפולים ותרופות (חוזרים)</h2>'+(meds.length?meds.map(card).join(''):'<div class="empty">אין טיפולים. הוסף עם +</div>');
+  h+='<h2>משימות חד־פעמיות</h2>'+(tasks.length?tasks.map(card).join(''):'<div class="empty">אין פעולות.</div>');
+  const stopped=S.items.filter(i=>i.stopped);
+  if(stopped.length)h+='<h2>הופסקו</h2>'+stopped.map(i=>'<div class="card"><div class="row"><div class="grow"><div class="title">'+esc(i.name)+'</div><div class="sub">הופסק · הדוח נשמר</div></div><button class="sm" onclick="resume(\''+i.id+'\')">חדש</button></div></div>').join('');
+  return h;
+}
+function stats(it){
+  const today=ymd(new Date()),from=once(it)?it.date:it.start,now=Date.now();
+  const list=occs(it,from,today).filter(o=>o.ts<=now||S.records[o.key]).sort((a,b)=>b.ts-a.ts);
+  const good=list.filter(o=>['taken','done'].includes(S.records[o.key]?.status)).length;
+  const skipped=list.filter(o=>S.records[o.key]?.status==='skipped').length;
+  const missed=list.length-good-skipped-list.filter(o=>!S.records[o.key]&&eff(o)>now).length;
+  return{list,good,skipped,missed:Math.max(0,missed),total:list.length,pct:list.length?Math.round(good/list.length*100):0};
+}
+function vTrack(){
+  if(!S.items.length)return '<div class="empty">עדיין אין מעקבים.</div>';
+  return '<h2>לחץ על מעקב לדוח מפורט</h2>'+S.items.map(i=>{const s=stats(i);
+    return '<div class="card" onclick="openReport(\''+i.id+'\')"><div class="row"><div class="grow"><div class="title">'+esc(i.name)+(i.stopped?' (הופסק)':'')+'</div><div class="sub">'+(i.type==='med'?'נלקחו ':'בוצעו ')+s.good+' מתוך '+s.total+(s.skipped?' · דולגו '+s.skipped:'')+(s.missed?' · לא נרשמו '+s.missed:'')+'</div></div><div class="pct">'+s.pct+'%</div></div></div>'}).join('');
+}
+function openReport(id){
+  const it=itemById(id),s=stats(it);
+  const rows=s.list.map(o=>{const r=S.records[o.key],st=state(o);
+    return '<tr><td>'+dayName(o.date)+' '+fmtDate(o.date)+'</td><td>'+o.time+'</td><td><span class="badge b-'+st+'">'+LABEL[st]+'</span></td><td>'+(r?hm(r.at)+(fmtDate(ymd(new Date(r.at)))!==fmtDate(o.date)?' ('+fmtDate(ymd(new Date(r.at)))+')':''):'—')+'</td><td>'+(S.snoozeCount[o.key]||'')+'</td></tr>'}).join('');
+  sheet('<div class="row"><div class="title">'+esc(it.name)+'</div><div class="pct">'+s.pct+'%</div></div><div class="sub">'+(it.dose?esc(it.dose)+' · ':'')+itemLine(it)+'</div>'+
+    '<div class="sub" style="margin:8px 0">'+(it.type==='med'?'נלקחו':'בוצעו')+' '+s.good+' · דולגו '+s.skipped+' · לא נרשמו '+s.missed+' · סה״כ '+s.total+'</div>'+
+    (rows?'<table><tr><th>תאריך</th><th>מתוכנן</th><th>סטטוס</th><th>אושר ב־</th><th>דחיות</th></tr>'+rows+'</table>':'<div class="empty">עדיין אין נתונים.</div>')+
+    '<div class="btns"><button class="grow" onclick="closeSheet()">סגור</button></div>');
+}
+window.openReport=openReport;
+
+function backupCard(){
+  return '<h2>גיבוי ושיתוף עם מכשיר אחר</h2><div class="card"><div class="note">ייצא קובץ גיבוי ושלח אותו (וואטסאפ/מייל) למכשיר השני, ושם לחץ "ייבוא". זה מחליף את הנתונים במכשיר המקבל.</div>'+
+    '<div class="btns"><button class="p" onclick="exportData()">ייצוא / שיתוף</button><button onclick="document.getElementById(\'imp\').click()">ייבוא</button></div><input type="file" id="imp" accept=".json,application/json" hidden onchange="importData(this.files[0])"></div>';
+}
+function lateCard(){
+  return '<label>אחרי כמה שעות ללא אישור נחשב "לא נרשם"</label><input type="number" min="1" max="24" value="'+S.settings.lateHours+'" onchange="S.settings.lateHours=Math.max(1,+this.value||3);save();render()">';
+}
+function vMore(){
+  if(NATIVE)return nativeCard()+ringCard()+backupCard();
+  const perm='Notification'in window?Notification.permission:'unsupported';
+  const permTxt={granted:'מופעלות ✓',denied:'חסומות ✗ (הוראות למטה)',default:'עוד לא אושרו',unsupported:'לא נתמך בדפדפן זה'}[perm];
+  return permHelp()+ringCard()+'<h2>התראות</h2><div class="card"><div class="row"><div>סטטוס: <b>'+permTxt+'</b></div></div>'+
+    '<div class="btns"><button class="p" onclick="askPerm()">הפעל התראות</button><button onclick="testNotif()">שלח התראת בדיקה</button></div>'+
+    '<label>חזרה על התראה עד שמאשרים (בדקות, 0 = כבוי)</label><input type="number" min="0" max="120" value="'+S.settings.repeat+'" onchange="S.settings.repeat=Math.max(0,+this.value||0);save()">'+
+    lateCard()+'</div>'+calCard()+backupCard()+
+    '<h2>חשוב לדעת</h2><div class="card note">בגרסת האינטרנט התראות נשלחות כשהאפליקציה מותקנת במסך הבית ופתוחה או ברקע. כדי לצלצל גם כשהכול סגור, השתמש בגרסת האנדרואיד (APK) או בייצוא ליומן.</div>';
+}
+window.askPerm=async()=>{if('Notification'in window)await Notification.requestPermission();render()};
+window.testNotif=async()=>{
+  if(!('Notification'in window)||Notification.permission!=='granted'){await askPerm();if(Notification.permission!=='granted')return}
+  const reg=await navigator.serviceWorker?.getRegistration();
+  const opt={body:'ככה תיראה תזכורת',tag:'test',icon:'icon-192.png',vibrate:[200,100,200]};
+  reg?reg.showNotification('בדיקת התראה 💊',opt):new Notification('בדיקת התראה 💊',opt);
+};
+window.exportData=async()=>{
+  const blob=new Blob([JSON.stringify(S)],{type:'application/json'}),name='reminders-backup-'+ymd(new Date())+'.json';
+  const f=new File([blob],name,{type:'application/json'});
+  try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:'גיבוי תזכורות'});return}}catch(e){if(e.name==='AbortError')return}
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();
+};
+window.importData=async f=>{
+  if(!f)return;
+  try{const d=JSON.parse(await f.text());if(!d.items||!d.records)throw 0;
+    if(!confirm('הייבוא יחליף את כל הנתונים במכשיר הזה. להמשיך?'))return;
+    S=Object.assign({snooze:{},snoozeCount:{},notified:{},settings:{repeat:10,lateHours:3}},d);save();render();alert('הנתונים יובאו');
+  }catch(e){alert('קובץ לא תקין')}
+};
+
+/* ---------- add / edit form ---------- */
+let F=null;
+const isRec=()=>F.type==='med'||!!F.recurring;
+function openForm(id){
+  const ex=id?itemById(id):null,today=ymd(new Date());
+  F=ex?JSON.parse(JSON.stringify(ex)):{type:'med',recurring:true,name:'',dose:'',times:['08:00'],start:today,end:'',date:today,time:'09:00',notes:''};
+  if(ex&&ex.type==='med')F.recurring=true;
+  drawForm(!!ex);
+}
+window.openForm=openForm;
+function drawForm(editing){
+  const med=F.type==='med',rec=isRec();
+  const days=(rec&&F.end&&F.start)?Math.round((new Date(F.end+'T00:00')-new Date(F.start+'T00:00'))/86400000)+1:'';
+  let body='';
+  if(rec){
+    body+='<label>באילו שעות ביום? (כל שעה = פעם אחת ביום)</label><div class="times" id="fTimes">'+F.times.map((t,i)=>'<div class="t"><input type="time" value="'+t+'" data-i="'+i+'"><button class="sm d" onclick="rmTime('+i+')">✕</button></div>').join('')+'</div><div class="btns"><button class="sm" onclick="addTime()">+ הוסף שעה</button></div>'+
+      '<label>מתאריך</label><input type="date" id="fStart" value="'+F.start+'" onchange="readForm();drawForm('+(!!F.id)+')">'+
+      '<label>למשך כמה ימים?</label><div class="btns" style="margin-top:0">'+[3,5,7,10,14,21,30].map(n=>'<button class="sm'+(days===n?' p':'')+'" onclick="setDays('+n+')">'+n+'</button>').join('')+'</div>'+
+      '<input type="number" min="1" max="365" placeholder="או הקלד מספר ימים" value="'+days+'" onchange="setDays(+this.value)" style="margin-top:8px">'+
+      '<label>עד תאריך (ריק = ללא הגבלה)</label><input type="date" id="fEnd" value="'+(F.end||'')+'" onchange="readForm();drawForm('+(!!F.id)+')">'+
+      (F.end?'<div class="sub" style="margin-top:6px">סה״כ '+days+' ימים · '+(days*F.times.length)+' תזכורות</div>':'');
+  }else body+='<label>תאריך</label><input type="date" id="fDate" value="'+F.date+'"><label>שעה</label><input type="time" id="fTime" value="'+F.time+'">';
+  sheet('<div class="title">'+(editing?'עריכה':'הוספה')+'</div>'+
+    (editing?'':'<div class="seg" style="margin-top:10px"><button class="'+(med?'on':'')+'" onclick="setType(\'med\')">💊 תרופה / טיפול</button><button class="'+(!med?'on':'')+'" onclick="setType(\'task\')">📌 משימה / בדיקה</button></div>')+
+    (med?'':'<div class="seg" style="margin-top:8px"><button class="'+(!rec?'on':'')+'" onclick="setRec(false)">חד־פעמית</button><button class="'+(rec?'on':'')+'" onclick="setRec(true)">חוזרת</button></div>')+
+    '<label>'+(med?'שם התרופה (למשל אנטיביוטיקה)':'מה לעשות (בדיקה, מפגש...)')+'</label><input id="fName" value="'+esc(F.name)+'">'+
+    (med?'<label>מינון (אופציונלי)</label><input id="fDose" placeholder="לדוגמה: 10 מ״ג, כדור אחד" value="'+esc(F.dose)+'">':'')+
+    body+
+    '<label>הערות</label><textarea id="fNotes" rows="2">'+esc(F.notes)+'</textarea>'+
+    '<div class="btns"><button class="p grow" onclick="saveForm()">שמור</button><button onclick="closeSheet()">ביטול</button></div>'+
+    (editing?'<div class="btns">'+(rec?'<button class="sm" onclick="stopItem(\''+F.id+'\')">הפסק מעקב (שומר דוח)</button>':'')+'<button class="sm d" onclick="delItem(\''+F.id+'\')">מחק לצמיתות</button></div>':''));
+}
+function readForm(){
+  F.name=$('#fName').value.trim();F.notes=$('#fNotes').value.trim();
+  if(F.type==='med')F.dose=$('#fDose').value.trim();
+  if(isRec()){F.times=[...document.querySelectorAll('#fTimes input')].map(i=>i.value).filter(Boolean);F.start=$('#fStart').value;F.end=$('#fEnd').value}
+  else{F.date=$('#fDate').value;F.time=$('#fTime').value}
+}
+window.readForm=readForm;window.drawForm=drawForm;
+window.setType=t=>{readForm();F.type=t;F.recurring=(t==='med');if(!F.times||!F.times.length)F.times=[F.time||'08:00'];if(!F.start)F.start=F.date||ymd(new Date());drawForm(false)};
+window.setRec=r=>{readForm();F.recurring=r;if(!F.times||!F.times.length)F.times=[F.time||'09:00'];if(!F.start)F.start=F.date||ymd(new Date());drawForm(!!F.id)};
+window.setDays=n=>{readForm();if(!(n>=1))return;if(!F.start)F.start=ymd(new Date());F.end=addDays(F.start,n-1);drawForm(!!F.id)};
+window.addTime=()=>{readForm();F.times.push('12:00');drawForm(!!F.id)};
+window.rmTime=i=>{readForm();F.times.splice(i,1);drawForm(!!F.id)};
+window.saveForm=()=>{
+  readForm();
+  if(!F.name){alert('חסר שם');return}
+  if(isRec()){
+    if(!F.times.length){alert('הוסף לפחות שעה אחת');return}
+    F.times=[...new Set(F.times)].sort();if(!F.start){alert('חסר תאריך התחלה');return}
+    if(F.end&&F.end<F.start){alert('תאריך הסיום לפני ההתחלה');return}
+    if(F.type==='task')F.recurring=true;
+  }else if(!F.date||!F.time){alert('חסרים תאריך ושעה');return}
+  if(F.id){const i=S.items.findIndex(x=>x.id===F.id);S.items[i]=F}else{F.id=uid();F.created=Date.now();S.items.push(F)}
+  save();closeSheet();render();
+  if('Notification'in window&&Notification.permission==='default')askPerm();
+};
+window.stopItem=id=>{if(!confirm('להפסיק את המעקב? הדוח יישמר.'))return;itemById(id).stopped=Date.now();save();closeSheet();render()};
+window.resume=id=>{const it=itemById(id);delete it.stopped;save();render()};
+window.delItem=id=>{if(!confirm('למחוק לצמיתות כולל כל ההיסטוריה?'))return;
+  S.items=S.items.filter(i=>i.id!==id);Object.keys(S.records).forEach(k=>{if(k.startsWith(id+'|'))delete S.records[k]});save();closeSheet();render()};
+
+/* ---------- render / nav ---------- */
+const TABS=[['today','🏠','היום'],['items','📋','משימות'],['track','📊','מעקבים'],['more','⚙️','עוד']];
+function render(){
+  $('#nav').innerHTML=TABS.map(t=>'<button class="'+(tab===t[0]?'on':'')+'" onclick="go(\''+t[0]+'\')"><span class="ic">'+t[1]+'</span>'+t[2]+'</button>').join('');
+  $('#hdr').textContent={today:'היום',items:'כל המשימות',track:'מעקבים ודוחות',more:'הגדרות'}[tab];
+  $('#fab').style.display=tab==='more'?'none':'block';
+  $('#main').innerHTML={today:vToday,items:vItems,track:vTrack,more:vMore}[tab]();
+  checkRing();
+}
+window.go=t=>{tab=t;render();window.scrollTo(0,0)};
+$('#fab').onclick=()=>openForm();
+
+/* ---------- notifications engine ---------- */
+async function notify(o,repeat){
+  if(!('Notification'in window)||Notification.permission!=='granted')return;
+  const it=o.item,title=(it.type==='med'?'💊 ':'📌 ')+it.name,body=(it.type==='med'?'הגיע הזמן ליטול'+(it.dose?' · '+it.dose:''):'תזכורת')+(repeat?' (תזכורת חוזרת)':'');
+  const opt={body,tag:o.key,renotify:true,requireInteraction:true,vibrate:[300,150,300,150,300],icon:window.__ICON||'icon-192.png',badge:window.__ICON||'icon-192.png',data:{key:o.key},
+    actions:[{action:'taken',title:it.type==='med'?'נטלתי':'בוצע'},{action:'snooze',title:'דחה'}]};
+  try{const reg=await navigator.serviceWorker?.getRegistration();reg?await reg.showNotification(title,opt):new Notification(title,opt)}catch(e){try{new Notification(title,{body})}catch(_){}}
+  if(document.visibilityState==='visible'&&navigator.vibrate)navigator.vibrate([300,150,300]);
+}
+function tick(){
+  if(NATIVE){if(!document.querySelector('.sheetbg')&&document.visibilityState==='visible'&&(tab==='today'||tab==='track'))render();return}
+  const now=Date.now(),today=ymd(new Date()),y=ymd(new Date(now-86400000));
+  let changed=false;
+  for(const it of activeItems())for(const o of occs(it,y,today)){
+    if(S.records[o.key])continue;
+    const e=eff(o); if(e>now||now-e>6*3600000)continue;
+    const last=S.notified[o.key],rep=S.settings.repeat*60000;
+    if(!last||last<e||(rep>0&&now-last>=rep)){const isRep=last&&last>=e;S.notified[o.key]=now;changed=true;notify(o,isRep)}
+  }
+  if(changed)save();
+  if(!document.querySelector('.sheetbg')&&document.visibilityState==='visible'&&(tab==='today'||tab==='track'))render();
+}
+function handleAction(key,action){
+  const o=occByKey(key);if(!o)return;
+  tab='today';render();
+  if(action==='taken')act(key,'taken');
+  else if(action==='snooze')openSnooze(key);
+  else sheet('<div class="title">'+esc(o.item.name)+'</div><div class="sub">'+(o.item.dose?esc(o.item.dose)+' · ':'')+'מתוכנן ל־'+o.time+'</div><div class="btns"><button class="ok grow" onclick="act(\''+key+'\',\'taken\')">'+(o.item.type==='med'?'נטלתי':'בוצע')+'</button><button onclick="openSnooze(\''+key+'\')">דחה</button><button onclick="act(\''+key+'\',\'skipped\')">דלג</button></div>');
+}
+
+/* ---------- ringing alarm, wake lock, calendar export ---------- */
+let AC=null,ringTimer=null,ringKey=null,WL=null;const silenced=new Set();
+function audio(){try{if(!AC)AC=new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume()}catch(e){}return AC}
+function beep(){const a=AC;if(!a||a.state!=='running')return;[0,0.28,0.56].forEach(d=>{const o=a.createOscillator(),g=a.createGain(),t=a.currentTime+d;o.type='square';o.frequency.value=880;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(0.5,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+0.22);o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+0.24)})}
+function buzz(){try{navigator.vibrate&&navigator.vibrate([400,200,400,200,400])}catch(e){}}
+function startRing(){if(ringTimer)return;audio();beep();buzz();ringTimer=setInterval(()=>{beep();buzz()},3000)}
+function stopRing(){if(ringTimer){clearInterval(ringTimer);ringTimer=null}try{navigator.vibrate&&navigator.vibrate(0)}catch(e){}}
+function dueNow(){const now=Date.now(),today=ymd(new Date(now)),y=ymd(new Date(now-86400000));
+  return activeItems().flatMap(i=>occs(i,y,today)).filter(o=>state(o,now)==='due'&&!silenced.has(o.key+'|'+eff(o))).sort((a,b)=>eff(a)-eff(b))}
+function checkRing(){
+  const host=$('#ring');if(!host)return;
+  const clear=()=>{if(host.innerHTML)host.innerHTML='';stopRing();ringKey=null};
+  if(S.settings.ring===false||document.visibilityState!=='visible')return clear();
+  const d=dueNow();if(!d.length)return clear();
+  const o=d[0],it=o.item,sig=o.key+'|'+eff(o)+'|'+d.length;
+  if(ringKey!==sig){ringKey=sig;
+    host.innerHTML='<div class="ringbg" onclick="audio()"><div class="ringcard"><div class="ringic">'+(it.type==='med'?'💊':'📌')+'</div><div class="ringttl">'+esc(it.name)+'</div><div class="sub" style="font-size:16px">'+(it.dose?esc(it.dose)+' · ':'')+'מתוכנן ל־'+o.time+(d.length>1?' · עוד '+(d.length-1)+' ממתינות':'')+'</div>'+
+    '<div class="btns"><button class="ok grow big" onclick="act(\''+o.key+'\',\'taken\')">'+(it.type==='med'?'נטלתי ✓':'בוצע ✓')+'</button></div>'+
+    '<div class="btns"><button class="grow" onclick="openSnooze(\''+o.key+'\')">דחה</button><button class="grow" onclick="act(\''+o.key+'\',\'skipped\')">דלג</button><button class="grow" onclick="silence(\''+o.key+'\')">השתק</button></div>'+
+    ((!AC||AC.state!=='running')?'<div class="note" style="margin-top:10px">אם אין צליל — הקש פעם אחת על המסך</div>':'')+'</div></div>';
+  }
+  startRing();
+}
+window.silence=k=>{const o=occByKey(k);if(o)silenced.add(k+'|'+eff(o));stopRing();checkRing()};
+window.audio=audio;
+window.testRing=()=>{audio();setTimeout(()=>{beep();buzz();setTimeout(beep,1200)},150)};
+async function wake(){try{if(S.settings.wake&&'wakeLock'in navigator&&document.visibilityState==='visible'&&!(WL&&!WL.released)){WL=await navigator.wakeLock.request('screen')}}catch(e){}}
+window.toggleWake=on=>{S.settings.wake=on;save();if(on)wake();else{try{WL&&WL.release()}catch(e){}WL=null}};
+function ringCard(){return '<h2>צלצול</h2><div class="card"><div class="note">כשהאפליקציה פתוחה על המסך, תזכורת תקפיץ מסך מלא, תצלצל ותרטוט עד שתאשר, תדחה או תשתיק.</div>'+
+  '<label class="chk"><input type="checkbox" '+(S.settings.ring!==false?'checked':'')+' onchange="S.settings.ring=this.checked;save();checkRing()"> צלצול ורטט בתזכורת</label>'+
+  '<label class="chk"><input type="checkbox" '+(S.settings.wake?'checked':'')+' onchange="toggleWake(this.checked)"> השאר את המסך דלוק כל עוד האפליקציה פתוחה (מומלץ כשהטלפון על המטען ליד המיטה)</label>'+
+  '<div class="btns"><button class="p" onclick="testRing()">בדוק צלצול</button></div></div>'}
+function permHelp(){
+  let t='';
+  if(window.self!==window.top)t+='<div class="card alert"><b>האפליקציה פתוחה בתוך מסגרת (תצוגה מקדימה).</b><div class="note">התראות וצליל לא יעבדו כאן. פתח את כתובת האתר ישירות בלשונית נפרדת של כרום בטלפון.</div></div>';
+  if('Notification'in window&&Notification.permission==='denied')t+='<div class="card alert"><b>ההתראות חסומות</b><div class="note">בכרום באנדרואיד: לחץ על סמל המנעול/הגדרות ליד כתובת האתר ← הרשאות ← התראות ← אפשר. אם התקנת למסך הבית: הגדרות הטלפון ← אפליקציות ← התראות 💊 ← אפשר. אחרי זה רענן את הדף.</div></div>';
+  return t}
+function icsEsc(s){return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')}
+function buildIcs(){
+  const now=Date.now(),today=ymd(new Date(now)),lim=ymd(new Date(now+60*86400000)),stamp=new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z';
+  const L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Reminders//HE','CALSCALE:GREGORIAN'];let n=0;
+  for(const it of activeItems())for(const o of occs(it,today,lim)){
+    if(o.ts<now||S.records[o.key])continue;
+    const dt=o.date.replace(/-/g,'')+'T'+o.time.replace(':','')+'00',title=(it.type==='med'?'💊 ':'📌 ')+it.name+(it.dose?' · '+it.dose:'');
+    L.push('BEGIN:VEVENT','UID:'+o.key.replace(/[^A-Za-z0-9]/g,'-')+'@reminders','DTSTAMP:'+stamp,'DTSTART:'+dt,'DURATION:PT10M','SUMMARY:'+icsEsc(title),'DESCRIPTION:'+icsEsc(it.notes||''),
+      'BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:'+icsEsc(title),'TRIGGER:PT0S','END:VALARM','END:VEVENT');n++}
+  L.push('END:VCALENDAR');return{text:L.join('\r\n'),n}}
+window.exportIcs=async()=>{
+  const r=buildIcs();if(!r.n){alert('אין תזכורות עתידיות לייצוא');return}
+  const blob=new Blob([r.text],{type:'text/calendar;charset=utf-8'}),f=new File([blob],'reminders.ics',{type:'text/calendar'});
+  try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:'תזכורות'});return}}catch(e){if(e.name==='AbortError')return}
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='reminders.ics';a.click();
+};
+function calCard(){return '<h2>צלצול מערכת דרך יומן הטלפון</h2><div class="card"><div class="note">הדרך המהימנה ביותר לקבל צלצול גם כשהאפליקציה סגורה: ייצוא כל התזכורות הקרובות (עד 60 יום) לקובץ יומן. פותחים אותו בטלפון ומוסיפים ליומן Google, והיומן מתריע בכל שעה. ייבוא חוזר יוצר כפילויות, ואת האישור "נטלתי" ממשיכים לסמן באפליקציה.</div><div class="btns"><button class="p" onclick="exportIcs()">ייצוא ליומן (.ics)</button></div></div>'}
+
+/* ---------- native Android (Capacitor) local notifications ---------- */
+let NSTAT='',nTimer=null;
+function nHash(s){let x=0;for(let i=0;i<s.length;i++)x=(x*31+s.charCodeAt(i))|0;return Math.abs(x)%400000}
+window.__nsync=()=>{if(!NATIVE)return;clearTimeout(nTimer);nTimer=setTimeout(nativeSync,700)};
+async function nativeSync(){
+  if(!LN)return;
+  try{
+    const now=Date.now(),today=ymd(new Date(now)),lim=ymd(new Date(now+7*86400000)),step=(S.settings.repeat||0)*60000,reps=step>0?3:0;
+    const p=await LN.getPending();
+    if(p.notifications&&p.notifications.length)await LN.cancel({notifications:p.notifications.map(n=>({id:n.id}))});
+    const used=new Set(),list=[];
+    for(const it of activeItems())for(const o of occs(it,today,lim)){
+      if(S.records[o.key])continue;
+      let base=nHash(o.key);while(used.has(base))base=(base+1)%400000;used.add(base);
+      const e=eff(o);
+      for(let k=0;k<=reps;k++){
+        const at=e+k*step;if(at<=now)continue;
+        list.push({id:base*4+k,title:(it.type==='med'?'💊 ':'📌 ')+it.name,
+          body:(k?'תזכורת חוזרת · ':'')+(it.type==='med'?'הגיע הזמן ליטול'+(it.dose?' · '+it.dose:''):'תזכורת')+' · '+o.time,
+          schedule:{at:new Date(at),allowWhileIdle:true},channelId:'doses',actionTypeId:'DOSE',extra:{key:o.key}});
+      }
+    }
+    list.sort((a,b)=>a.schedule.at-b.schedule.at);
+    const out=list.slice(0,400);
+    if(out.length)await LN.schedule({notifications:out});
+    NSTAT=out.length+' התראות מתוזמנות (7 הימים הקרובים)';
+  }catch(e){NSTAT='שגיאה בתזמון: '+((e&&e.message)||e)}
+  if(tab==='more'&&!document.querySelector('.sheetbg'))render();
+}
+async function nativeInit(){
+  if(!LN)return;
+  try{
+    try{const p=await LN.checkPermissions();if(p.display!=='granted')await LN.requestPermissions()}catch(e){}
+    try{const x=await LN.checkExactNotificationSetting();if(x.exact_alarm!=='granted')await LN.changeExactNotificationSetting()}catch(e){}
+    await LN.createChannel({id:'doses',name:'תזכורות תרופות ומשימות',description:'התראות נטילת תרופות ומשימות',importance:5,visibility:1,vibration:true,lights:true});
+    await LN.registerActionTypes({types:[{id:'DOSE',actions:[{id:'taken',title:'נטלתי / בוצע'},{id:'snooze',title:'דחה 10 דק׳'}]}]});
+    LN.addListener('localNotificationActionPerformed',ev=>{
+      const key=ev.notification&&ev.notification.extra&&ev.notification.extra.key;if(!key||!occByKey(key))return;
+      if(ev.actionId==='taken')act(key,'taken');
+      else if(ev.actionId==='snooze')doSnooze(key,Date.now()+10*60000);
+      else handleAction(key,'');
+    });
+    await nativeSync();
+  }catch(e){NSTAT='שגיאה: '+((e&&e.message)||e)}
+}
+window.nativeAsk=async()=>{try{await LN.requestPermissions();await LN.changeExactNotificationSetting()}catch(e){}await nativeSync();render()};
+window.nativeTest=async()=>{
+  try{await LN.schedule({notifications:[{id:999999,title:'💊 בדיקת התראה',body:'ככה תיראה תזכורת',schedule:{at:new Date(Date.now()+10000),allowWhileIdle:true},channelId:'doses'}]});
+    alert('ההתראה תגיע בעוד 10 שניות. אפשר לנעול את המסך או לצאת מהאפליקציה כדי לבדוק.')}catch(e){alert('שגיאה: '+((e&&e.message)||e))}
+};
+function nativeCard(){
+  return '<h2>התראות מערכת (אנדרואיד)</h2><div class="card"><div class="note">ההתראות מתוזמנות ישירות במערכת הטלפון: הן מצלצלות בזמן גם כשהאפליקציה סגורה ונשמרות אחרי הפעלה מחדש. האפליקציה מתזמנת 7 ימים קדימה בכל פעם שהיא נפתחת או משתנה, ולכן פתח אותה לפחות פעם בכמה ימים.</div>'+
+   '<div class="sub" style="margin:8px 0">'+esc(NSTAT||'—')+'</div>'+
+   '<div class="btns"><button class="p" onclick="nativeAsk()">בקש הרשאות</button><button onclick="nativeTest()">התראת בדיקה (בעוד 10 שניות)</button></div>'+
+   '<label>חזרה על ההתראה כל X דקות עד 3 פעמים (0 = כבוי)</label><input type="number" min="0" max="120" value="'+S.settings.repeat+'" onchange="S.settings.repeat=Math.max(0,+this.value||0);save()">'+
+   lateCard()+
+   '<div class="note" style="margin-top:10px">כדי שהמערכת לא תחסום את ההתראות: הגדרות הטלפון ← אפליקציות ← תזכורות ← סוללה ← ללא הגבלה.</div></div>';
+}
+
+/* ---------- boot ---------- */
+if(!NATIVE&&'serviceWorker'in navigator){
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+  navigator.serviceWorker.addEventListener('message',e=>{if(e.data&&e.data.key)handleAction(e.data.key,e.data.action)});
+}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){wake();tick();render()}else{stopRing()}});
+['pointerdown','touchstart','keydown'].forEach(ev=>document.addEventListener(ev,()=>{audio()},{passive:true}));
+setInterval(checkRing,2500);wake();
+setInterval(tick,20000);
+render();tick();
+if(NATIVE)nativeInit();
+const q=new URLSearchParams(location.search);
+if(q.get('key')){handleAction(q.get('key'),q.get('action')||'');history.replaceState({},'',location.pathname)}
+</script>
+</body>
+</html>
